@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>ROS Debugger</title>
+
+<link rel="stylesheet" href="stylesheet.css">
+
+<script type="text/javascript" src="http://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+<script type="text/javascript" src="http://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+<!my script>
+<script type="text/javascript" src="ROSdebug.js"></script>
+</head>
+
+<body>
+  <h1>ROS Debugger</h1>
+  <div class=main>
+
+  <div class=io>
+  <div class=echo_topic style="float:left; margin:10px">
+  Echo Topic:<br>
+  <input type="text"
+         name="echo_topic"
+         onkeyup = "if (event.keyCode == 13){
+            echo_topic(value);
+         }"
+  />
+
+  <p id=echo class=io style="white-space: pre-wrap">:</p>
+  </div>
+
+  <div class=pub_topic style="float:left; margin:10px">
+  Publisher:<br>
+    Topic:
+    <input type="text" id="pub_message_topic"
+                       onkeyup="check_message_type(value)"
+    />
+    Message Type:
+    <input type="text" id="pub_message_type"
+                       onkeyup="if (event.keyCode == 13){get_msg_outline()}"
+    /><br>
+    Message:<br>
+    <textarea id="pub_message" cols="60" rows="10" ></textarea><br>
+    <button onclick="publish_message()" class=io>publish</button>
+  </div>
+  
+  <div class=params style="margin:10px">
+  Check ROS param: <br>
+  <input type="text"
+         name="read_param"
+         onkeyup = "if (event.keyCode == 13){
+            get_param(value);
+         }"
+  />
+  <p id=get_param class=io style="white-space: pre-wrap">:</p>
+  </div>
+
+  </div>
+  
+  <div class=lists>
+  <div class=list_topics style="float:left">
+  Topics:
+  <button onclick="refresh_topic_list()">refresh</button>
+  <p id=topic_list class=lists style="white-space: pre-wrap"></p>
+  </div>
+
+  <div class=node_list style="float:left">
+  Running Nodes:
+  <button onclick="refresh_node_list()">refresh</button>
+  <p id=node_list class=lists style="white-space: pre-wrap"></p>
+<!--
+  Parameters:
+  <button onclick="refresh_param_list()">refresh</button>
+  <p id=param_list style="white-space: pre-wrap"></p>
+  <br><br>
+-->
+  </div>
+
+  <div class=param_list>
+  Parameters:
+  <button onclick="refresh_param_list()">refresh</button>
+  <p id=param_list class=lists></p>
+  </div>
+
+  </div>
+
+  <div class=readme>
+    <br>
+    README
+    <p class=readme>
+    To give this webpage access to ROS, you must run:<br>
+    &ensp; roslaunch rosbridge_server rosbridge_websocket.launch<br><br>
+    To echo a topic, type the topic name and press enter<br>
+      The most recent message will alwasy be displayed, 
+      the text greys out if no message is recieved for two seconds or more <br><br>
+    To check a parameter, type the parameter name and press enter<br><br>
+    To publish to a topic, type the topic name, and if necessry the message type. 
+    press enter in either of those fields to get a message outline. Fill in the message 
+    and press publish to send the message.
+    All valid message types should give you an outline.<br><br>
+    Lists in 2nd panel update automatically every 5 seconds.
+    </p>
+
+  </div>
+  
+  </div>
+</body>
+</html>

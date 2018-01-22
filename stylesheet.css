@@ -1,0 +1,179 @@
+body{
+  background-color: #531;
+}
+
+h1{
+  color:#fda;
+  text-align:center;
+}
+
+.main{
+  width:1370px;
+  margin: 0 auto;
+}
+
+input{
+  background-color: #222;
+  color: #fda;
+  padding: 5px;
+  font-size: 12pt;
+  border-color: #fda;
+  margin: 5px;
+  width: 190px;
+}
+
+textarea{
+  background-color: #222;
+  color: #fda;
+  padding: 5px;
+  font-size: 12pt;
+  border-color: #fda;
+  margin: 5px;
+}
+
+.io{
+  background-color: #333;
+  font-size: 14pt;
+  color: #fda;
+  border-color: #fda;
+  padding: 5px;
+}
+
+div.io{
+  min-height:360px;
+  width:1350px;
+  margin:0px;
+  border-style: ridge;
+  border-width: 5px;
+  border-color: #752;
+}
+
+button{
+  background-color: #752;
+  border-color: #fda;
+}
+button.io{
+  background-color: #752;
+  float:right;
+  margin-right: 50px;
+}
+button:hover{
+  background-color: #642;
+}
+button:active{
+  background-color: #531;
+}
+
+.pub_topic{
+  width:640px;
+}
+
+p.io{
+  height: 230px;
+  overflow-y:auto;
+  background-color:#444;
+  padding:5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #222;
+  width: 300px;
+}
+
+p.lists{
+  min-height: 300px;
+  max-height: 400px;
+  overflow-y:auto;
+  background-color:#444;
+  padding:5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #fda;
+  width: 400px;
+}
+
+.params{
+  float:left;
+  width:330px;
+  background:inherit;
+}
+.pub_topic{
+  background:inherit;
+}
+
+.lists{
+  margin-top: 10px;
+  padding: 5px;
+  color: #fda;
+  background-color:#310;
+  width:1350px;
+  border-style: ridge;
+  border-width: 5px;
+  border-color: #752;
+}
+
+.list_topics{
+  margin-top:10px;
+  margin-left:10px;
+  margin-right:30px;
+}
+
+.node_list{
+  margin-top:10px;
+  margin-right: 30px;
+}
+.param_list{
+  margin-top:10px;
+}
+
+.readme{
+  color:#fda;
+}
+
+p.readme{
+  min-height: 300px;
+  overflow-y:auto;
+  background-color:#444;
+  padding:5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #fda;
+  width: 600px;
+  font-size: 12pt;
+}
+
+/* scrollbar */
+.lists::-webkit-scrollbar{
+  width: 10px;
+}
+.lists::-webkit-scrollbar-track{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+.lists::-webkit-scrollbar-thumb{
+  background-color: darkgrey;
+  outline:1px solid slategrey;
+}
+
+.io::-webkit-scrollbar{
+  width: 10px;
+}
+.io::-webkit-scrollbar-track{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+.io::-webkit-scrollbar-thumb{
+  background-color: darkgrey;
+  outline:1px solid slategrey;
+}
+
+textarea::-webkit-scrollbar{
+  width: 10px;
+}
+textarea::-webkit-scrollbar-track{
+  -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.3);
+}
+textarea::-webkit-scrollbar-thumb{
+  background-color: darkgrey;
+  outline:1px solid slategrey;
+}
+
+
+
